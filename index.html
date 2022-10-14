@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <script src="main.js" defer></script>
 </head>
 <body>
     <h1>10 Questions</h1>
+<form id ="quiz" name = "quiz">
 
 <p>Question 1</p>
 <input type="radio" id = "question" name = "question1" value = "answerA">Answer A<br>
@@ -53,6 +54,13 @@
 <p>Question 10</p>
 <input type="radio" id = "question" name = "question10" value = "answerA">Answer A<br>
 <input type="radio" id = "question" name = "question10" value = "answerB">Answer B<br>
+
+<input id = "button" type = "button" value = "DONE!" onclick = "check();">
+</form>
+
+<div id = "after_submit">
+<p id = "number_correct"></p>
+</div>
 
 </body>
 </html>
