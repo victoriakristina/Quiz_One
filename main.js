@@ -56,6 +56,7 @@ if (question10 == "Falskt") {
  // Min Arrays meddelanden
  
  let messages = ["Mycket väl godkänt", "Godkänt", "Underkänt"];
+ let pictures = ["img/win.gif", "img/meh.gif", "img/lose.gif"];
 
 // Under 5 rätt
 let range;  
@@ -77,4 +78,5 @@ document.getElementById("after_submit").style.visibility = "visible";
 
 document.getElementById("message").innerHTML = messages[range];
 document.getElementById("number_correct").innerHTML = "Du fick " + correct + " rätt.";
+document.getElementById("pictures").src = pictures[range];
 }
