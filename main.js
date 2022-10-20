@@ -55,9 +55,26 @@ if (question10 == "Falskt") {
                             
  // Min Arrays meddelanden
  
- let messages = ["Underkänt", "Godkänt", "Mycket väl godkänt"];
+ let messages = ["Mycket väl godkänt", "Godkänt", "Underkänt"];
 
+// Under 5 rätt
+let range;  
+if (correct < 5) {
+    range = 2;
+}
+
+// Över 5 rätt
+if (correct > 5 && correct <= 7) {
+    range = 1;
+}
+
+// Över 7 rätt
+if (correct > 7) {
+    range = 0;
+}
 
 document.getElementById("after_submit").style.visibility = "visible";
+
+document.getElementById("message").innerHTML = messages[range];
 document.getElementById("number_correct").innerHTML = "Du fick " + correct + " rätt.";
 }
