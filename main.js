@@ -53,7 +53,7 @@ if (question10 == "Falskt") {
     correct++;
     }
                             
- // Min Arrays meddelanden
+ // Mina Arrays meddelanden
  
  let messages = ["Mycket väl godkänt", "Godkänt", "Underkänt"];
  let pictures = ["img/win.gif", "img/meh.gif", "img/lose.gif"];
@@ -80,3 +80,10 @@ document.getElementById("message").innerHTML = messages[range];
 document.getElementById("number_correct").innerHTML = "Du fick " + correct + " rätt.";
 document.getElementById("pictures").src = pictures[range];
 }
+
+
+// Darkness knapp!
+function myFunction() {
+    let element = document.body;
+    element.classList.toggle("dark-mode");
+ }
