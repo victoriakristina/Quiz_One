@@ -58,20 +58,24 @@ if (question10 == "Falskt") {
  let messages = ["Mycket väl godkänt", "Godkänt", "Underkänt"];
  let pictures = ["img/win.gif", "img/meh.gif", "img/lose.gif"];
 
-// Under 5 rätt
+
+// Under 5 rätt UNDERKÄNT
 let range;  
 if (correct < 5) {
     range = 2;
+    document.getElementById("message").style.color = "red";
 }
 
-// Över 5 rätt
+// Över 5 rätt GODKÄNT
 if (correct > 5 && correct <= 7) {
     range = 1;
+    document.getElementById("message").style.color = "yellow";
 }
 
-// Över 7 rätt
+// Över 7 rätt MYCKET VÄL GODKÄNT
 if (correct > 7) {
     range = 0;
+    document.getElementById("message").style.color = "green";
 }
 
 document.getElementById("after_submit").style.visibility = "visible";
@@ -79,6 +83,7 @@ document.getElementById("after_submit").style.visibility = "visible";
 document.getElementById("message").innerHTML = messages[range];
 document.getElementById("number_correct").innerHTML = "Du fick " + correct + " rätt.";
 document.getElementById("pictures").src = pictures[range];
+
 }
 
 
@@ -87,3 +92,8 @@ function myFunction() {
     let element = document.body;
     element.classList.toggle("dark-mode");
  }
+
+
+// document.getElementById("iG").style.color = "red";
+//document.getElementById("gG").style.color = "yellow";
+//document.getElementById("mvG").style.color = "green";
